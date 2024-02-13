@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+.h-100-v{
+  height: 100vh;
+}
+.h-100-p{
+  height: 100%;
+}
+.w-100-p{
+  width: 100%;
+}
+.bg-white{
+  background-color: white;
+}
+.c-white{
+  color: white;
+}
+.top-bg{
+  /* background-image: url('https://port2bucket.s3.amazonaws.com/port-bg2.jpeg'); */
+  background-image: url('https://images.unsplash.com/photo-1526488807855-309186804587?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+}
+.d-flex{
+  display: flex;
+}
+.f-d-row{
+  flex-direction: row;
+}
+.f-d-column{
+  flex-direction: column;
+}
+.jus-content-center{
+  justify-content: center;
+}
+.j-c-space-around{
+  justify-content: space-around;
+}
+.al-center{
+  align-items: center;
+}
+.al-stretch{
+  align-items: stretch;
+}
+.p-all-10{
+  padding: 1rem;
+}
+.m-all-10{
+  margin: 1rem;
+}
+.m-all-30{
+  margin: 3rem;
+}
+.border-none{
+  border: none;
+}
+.thin-line-border-white{
+  border: 0.7px solid ;
+  border-image: linear-gradient(to right, white, #1f80c4) 1;
+}
+.b-radius-5{
+  border-radius: 0.5rem;
+}
+.my-profile-icon{
+  height: 14rem;
+  width: 14rem;
+  cursor: pointer;
+  /* border-image: linear-gradient(to right, white, #1f80c4) 1; */
+  border-width: 0.5px;
+  border-style: solid white;
+  border-radius: 8rem;
+}
+
+.brief-container{
+  border: 0.5px solid white;
+  border-radius: 2rem;
+  margin: 1rem;
+}
+.fs-15{
+  font-size: 1.5rem;
+}
+.project-list {
+  list-style-type: disc; /* or 'circle' or 'square' */
+  color: white; /* Set the color of the bullets to white */
+}
+.m-l-20{
+  margin-left: 2rem;
+}
+.profile-bg{
+  /* background-image: url('https://port2bucket.s3.amazonaws.com/jo5.jpeg'); */
+  background-image: url('https://port2bucket.s3.amazonaws.com/jo3.jpeg');
+  background-size: cover;
+}
+.my-projects-div{
+  /* height: 25rem;
+  width: 65rem; */
+  cursor: pointer;
+  border-width: 0.5px;
+  border-style: solid white;
+  border-radius: 1rem;
+  transition: width 1s, height 2s;
+}
+.expand-div{
+  height: 26rem;
+  width: 66rem;
+}
+/* .desc-div{
+  display: none;
+  transition: display 2s;
+}
+.expand-desc-div{
+  display: block;
+} */
+.desc-div {
+  display: none;
+  transition: opacity 0.5s ease-in-out; /* Add a transition property */
+  opacity: 0; /* Start with opacity 0 */
+}
+
+.expand-desc-div {
+  display: block;
+  opacity: 1; /* Change opacity to 1 when expanded */
+}
+.hide{
+  display: none;
+  transition: display 2s;
+}
+.project-desc{
+  display: block;
+}
+.height-mc{
+  height: max-content;
+}
+.f-w-8{
+  font-weight: 800;
+}
+.al-fs{
+  align-items: flex-start;
+}
+.first-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media only screen and (max-width: 600px) {
+  .first-container {
+    flex-direction: column;
+  }
+  .my-profile-icon{
+    height: 9rem;
+    width: 9rem;
+  }
+  .fs-15{
+    font-size: 1rem;
+  }
+  .second-container{
+    display: block;
+  }
+  .third-container{
+    display: block;
+  }
+  .brief-container{
+    margin: 1.5rem;
+  }
+}
